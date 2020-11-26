@@ -77,7 +77,7 @@ define('VE_IS_STAGING', true);
  * define useful paths based on a staging or production environment
  */
 define('VE_URL', (VE_IS_STAGING ? 'http://localhost:10004/' : 'https://via-emilia.com/'));
-define('VE_INCLUDES', VE_URL . 'wp-content/themes/via-emilia/inc');
+define('VE_INCLUDES', VE_URL . 'wp-content/themes/via-emilia/inc/');
 
 
 /**
