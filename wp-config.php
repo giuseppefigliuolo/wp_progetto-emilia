@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The base configuration for WordPress
  *
@@ -20,22 +21,22 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'local' );
+define('DB_NAME', 'local');
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8' );
+define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define('DB_COLLATE', '');
 
 /**
  * Authentication Unique Keys and Salts.
@@ -55,23 +56,49 @@ define('SECURE_AUTH_SALT', 'm/kpm0mnSZVLA7BgTEOX1SAzHegut0gl0YoxaOBmXoKGmivwRBDJ
 define('LOGGED_IN_SALT',   'vc//8RLhyOzQOShaWwEMuf3kuYw+75qMEvgUQYPUckyU0yqrcyaal4vmbWP+XirZY+XJPA4HNBJtRSzJ38W72g==');
 define('NONCE_SALT',       'DMWE3k2KoN5rcaA+RlyEzI683rUKoH0HN7EVPSjcsobOusqL/c2eId4cGnDq8+vRYbZ7Wqp+SEMUSIOpXFZFHw==');
 
+/**#@-*/
+
 /**
- * WordPress Database Table prefix.
+ * Prefisso Tabella del Database WordPress.
  *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
+ * È possibile avere installazioni multiple su di un unico database
+ * fornendo a ciascuna installazione un prefisso univoco.
+ * Solo numeri, lettere e sottolineatura!
  */
 $table_prefix = 'wp_';
 
+/**
+ * define a constant to recognize a staging environment
+ * remember to turn this to false in the real website
+ */
+define('VE_IS_STAGING', true);
+
+/**
+ * define useful paths based on a staging or production environment
+ */
+define('VE_URL', (VE_IS_STAGING ? 'http://localhost:10004/' : 'https://via-emilia.com/'));
+define('VE_INCLUDES', VE_URL . 'wp-content/themes/via-emilia/');
 
 
+/**
+ * Per gli sviluppatori: modalità di debug di WordPress.
+ *
+ * Modificare questa voce a TRUE per abilitare la visualizzazione degli avvisi durante lo sviluppo
+ * È fortemente raccomandato agli svilupaptori di temi e plugin di utilizare
+ * WP_DEBUG all’interno dei loro ambienti di sviluppo.
+ *
+ * Per informazioni sulle altre costanti che possono essere utilizzate per il debug,
+ * leggi la documentazione
+ *
+ * @link https://wordpress.org/support/article/debugging-in-wordpress/
+ */
+define('WP_DEBUG', true);
 
-/* That's all, stop editing! Happy publishing. */
+/* Finito, interrompere le modifiche! Buon blogging. */
 
-/** Absolute path to the WordPress directory. */
-if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
-}
+/** Path assoluto alla directory di WordPress. */
+if (!defined('ABSPATH'))
+	define('ABSPATH', dirname(__FILE__) . '/');
 
-/** Sets up WordPress vars and included files. */
-require_once ABSPATH . 'wp-settings.php';
+/** Imposta le variabili di WordPress ed include i file. */
+require_once(ABSPATH . 'wp-settings.php');
