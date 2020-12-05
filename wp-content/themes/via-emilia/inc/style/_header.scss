@@ -1,8 +1,9 @@
 $margin-left: 2.2rem;
+$max-width: 1200px;
 
 // Header home
 header {
-  max-width: 1200px;
+  max-width: $max-width;
   margin: 0 auto;
 
   .header-banner {
@@ -30,4 +31,16 @@ header {
       }
     }
   }
+}
+
+// Menu
+.header-menu {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: $max-width;
+  width: 75%;
+  margin: 0 auto;
+  padding: 2.6rem 0;
+  font-size: 1.15rem;
+  font-weight: 800;
 }

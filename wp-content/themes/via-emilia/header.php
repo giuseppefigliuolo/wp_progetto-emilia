@@ -44,4 +44,10 @@
             }
             ?>
         </div>
+        <?php
+        wp_nav_menu([
+            'theme_location' => 'main_menu',
+            'menu_class' => 'header-menu'
+        ]);
+        ?>
     </header>

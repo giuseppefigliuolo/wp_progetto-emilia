@@ -56,6 +56,17 @@ header .header-banner__header h1 {
   align-self: center;
 }
 
+.header-menu {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 2.6rem 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
