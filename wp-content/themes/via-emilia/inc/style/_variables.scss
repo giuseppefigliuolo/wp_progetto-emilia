@@ -1,0 +1,45 @@
+// Qui scriviamo i colori e le variabili che useremo
+
+@mixin selfCentered {
+  align-self: center;
+  justify-self: center;
+}
+
+@mixin flexCenter($direction, $space) {
+  display: flex;
+  justify-content: $space;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+$font-weights: (
+  "ultralight": 200,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "xtr-bold": 800,
+  "max": 900,
+);
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.dank-mono {
+  font-family: "Cutive Mono", monospace;
+}
+
+.light {
+  color: white;
+}
+
+// Fonts
+/* @font-face {
+    font-family: 'dank-mono';
+    src: url(path/to/file) format(Example: 'truetype' or 'opentype' depending on the file extension of your font);
+} */

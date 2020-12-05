@@ -34,7 +34,14 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <!-- START WEBSITE BODY -->
-    <div class="red">
-        <h2 class="white">CIAOOOOOOO</h2>
-    </div>
+    <header>
+        <div class="header-banner" style="background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2) ), url('<?php the_field('header_img') ? the_field('header_img') : the_field('header_img', 19); ?>')">
+            <?php
+            if (is_home()) {
+                get_template_part('./templates/headers/header-home');
+            } else {
+                get_template_part('./templates/headers/header-page');
+            }
+            ?>
+        </div>
+    </header>

@@ -70,10 +70,9 @@ add_action('after_setup_theme', 've_setup');
  */
 function ve_styles()
 {
-
     // enqueue our style.css file
     wp_enqueue_style('ve-reset', get_stylesheet_directory_uri() . '/style.css', array(), null, 'all');
-    wp_enqueue_style('ve-style', VE_INCLUDES . 'css/style.css', array('ve-reset'),  null, 'all');
+    wp_enqueue_style('ve-style', VE_INCLUDES . 'style/css/style.css', array('ve-reset'),  null, 'all');
 }
 add_action('wp_enqueue_scripts', 've_styles');
 

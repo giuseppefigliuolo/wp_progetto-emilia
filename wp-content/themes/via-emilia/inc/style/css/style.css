@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header .header-banner {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+header .header-banner__paragraph {
+  flex: 3;
+}
+
+header .header-banner__paragraph p {
+  padding-left: 2.2rem;
+  margin-top: 1.3rem;
+  font-size: 1.25rem;
+}
+
+header .header-banner__header {
+  flex: 1;
+  display: flex;
+}
+
+header .header-banner__header h1 {
+  font-size: 3.5rem;
+  padding-left: 2.2rem;
+  align-self: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.dank-mono {
+  font-family: "Cutive Mono", monospace;
+}
+
+.light {
+  color: white;
+}
+
+/* @font-face {
+    font-family: 'dank-mono';
+    src: url(path/to/file) format(Example: 'truetype' or 'opentype' depending on the file extension of your font);
+} */
+/*# sourceMappingURL=style.css.map */

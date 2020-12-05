@@ -1,0 +1,33 @@
+$margin-left: 2.2rem;
+
+// Header home
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .header-banner {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    &__paragraph {
+      flex: 3;
+      p {
+        padding-left: $margin-left;
+        margin-top: 1.3rem;
+        font-size: 1.25rem;
+      }
+    }
+    &__header {
+      flex: 1;
+      display: flex;
+      h1 {
+        font-size: 3.5rem;
+        padding-left: $margin-left;
+        align-self: center;
+      }
+    }
+  }
+}
